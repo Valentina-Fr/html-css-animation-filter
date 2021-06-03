@@ -100,8 +100,23 @@
 }
 
 .ex-11-icon {
-    font-size: 60px;
+    font-size: 60px; 
 }
+.ex-11-icon:hover {
+    animation: dialing 2s linear;
+}
+@keyframes dialing {
+    0%{
+        transform: rotate(0);
+    }
+    75% {
+        transform: rotate(270deg);
+    }
+    100%{
+        transform: rotate(0);
+    }
+}
+
 .ex-12-button, .ex-13-button {
     position: relative;
     display: block;
@@ -131,3 +146,35 @@
     width: 60px;
     height: 20px;
 }
+
+.ex-12-button:hover .ex-12-top-white{
+    animation: topline 2s linear alternate;
+}
+.ex-12-button:hover .ex-12-bottom-white {
+    animation: bottomline 2s linear alternate;
+}
+
+@keyframes topline {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(115px);
+    }
+    100% {
+        transform: translate(0);
+    }
+}
+
+@keyframes bottomline {
+    0% {
+        transform: translateX(0);
+    }
+    50% {
+        transform: translateX(-95px);
+    }
+    100% {
+        transform: translateX(0);
+    }
+}
+
